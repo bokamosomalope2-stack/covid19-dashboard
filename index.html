@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Early Outbreak Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>COVID-19 Early Outbreak Dashboard</h1>
+        <p>Tracking the early outbreak: February - March 2020</p>
+    </header>
+
+    <main>
+        <section class="filters">
+            <label for="countrySelect">Select Country:</label>
+            <select id="countrySelect">
+                <option value="China">China</option>
+                <option value="Italy">Italy</option>
+                <option value="South Korea">South Korea</option>
+                <option value="United States">United States</option>
+                <option value="South Africa">South Africa</option>
+            </select>
+        </section>
+
+        <section class="metrics">
+            <div class="card">
+                <h2>Confirmed Cases</h2>
+                <p id="confirmed">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Deaths</h2>
+                <p id="deaths">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Recoveries</h2>
+                <p id="recovered">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Active Cases</h2>
+                <p id="active">0</p>
+            </div>
+        </section>
+
+        <section class="charts">
+            <div class="chart-container">
+                <h2>COVID-19 Trends Over Time</h2>
+                <canvas id="trendChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>New Cases Between Recorded Dates</h2>
+                <canvas id="dailyChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data: Johns Hopkins CSSE | February - March 2020</p>
+    </footer>
+</body>
+</html>
